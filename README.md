@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# MovieLand 🎬
+MovieLand is a React-based movie search application that allows users to search for movies and displays details like the movie's title, release year, type, and poster. The application fetches data from the OMDb API and features a responsive and visually appealing UI.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+Search Movies: Enter keywords to search for movies.
 
-## Available Scripts
+Responsive Design: Optimized for different screen sizes.
 
-In the project directory, you can run:
+Styled Components: Uses Roboto Slab and Raleway fonts and a modern UI design.
 
-### `npm start`
+Interactive Movie Cards: Each movie card displays relevant information and highlights on hover.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Error Handling: Displays a "No Movies Found" message if the search doesn't return results.
+Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Technologies Used
+React: Component-based UI library.
+CSS: For styling the components.
+OMDb API: Fetches movie data based on user search.
+### Installation
+Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### bash
 
-### `npm run build`
+Copy code
+git clone https://github.com/yourusername/movieland.git
+cd movieland
+Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### bash
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Copy code
+npm install
+Run the app:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### bash
 
-### `npm run eject`
+Copy code
+npm start
+The app should now be running on http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
+Open the Application: After running, open your browser and go to http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Search Movies: Type the movie title in the search box, then click the search icon.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+View Movie Details: Browse through the results to view details like release year, type, and poster. If no movies are found, a message will appear.
+### Code Structure
+App.js: Main component that manages the application’s state, handles the search functionality, and displays results.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+MovieCard.js: Sub-component that renders individual movie cards with information from the OMDb API.
 
-## Learn More
+App.css: Contains all the styles for the application, including responsive design adjustments and hover effects for the movie cards.
+## Key Parts of the Code
+## API Integration:
+API_URL: The base URL for fetching data from the OMDb API.
+searchMovies: An asynchronous function that fetches data and updates the movies state with the results.
+### Hooks:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+useState: Manages movies and searchTerm states.
 
-### Code Splitting
+useEffect: Initializes with a default search term ("Spiderman") on component load.
+### CSS Styling:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Gradient and Shadows: Provides visual appeal with text gradients and shadow effects on components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Responsive Design: Adjusts the layout and font sizes based on screen width.
 
-### Making a Progressive Web App
+### Environment Variables
+To use the OMDb API, create a .env file in the root of your project and add your API key:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+env
+Copy code
+REACT_APP_OMDB_API_KEY=your_api_key
+Contributing
+Contributions are welcome! Please follow these steps:
 
-### Advanced Configuration
+### Fork the project.
+Create your feature branch (git checkout -b feature/NewFeature).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Commit your changes (git commit -m 'Add new feature').
 
-### Deployment
+Push to the branch (git push origin feature/NewFeature).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Open a pull request.
+### License
+Distributed under the MIT License. See LICENSE for more information.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact
+Your Name - Arshadkahn627@outlook.com
